@@ -1,0 +1,14 @@
+<div class="text-wrapper">
+  <div [formGroup]="form">
+    <input formControlName="firstname" placeholder="Firstname" />
+    <p *ngIf="this.form.get('firstname').errors">Require Field</p>
+    <input formControlName="lastname" placeholder="Lastname" />
+    <p *ngIf="this.form.get('lastname').errors">Require Field</p>
+    <button (click)="openDialog()">Open Mat Dialog</button>
+    <p *ngIf="dialogMsg">{{ dialogMsg }}</p>
+  </div>
+</div>
+<div class="actions">
+  <button class="button" (click)="onClose()">CANCEL</button>
+  <button class="button" (click)="onClose()">OK</button>
+</div>

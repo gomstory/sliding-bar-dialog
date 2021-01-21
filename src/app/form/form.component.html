@@ -1,0 +1,13 @@
+<form [formGroup]="formGroup">
+  <mat-tab-group>
+    <mat-tab label="Customer Info">
+      <input formControlName="firstname" placeholder="Firstname" />
+      <input formControlName="lastname" placeholder="Lastname" />
+    </mat-tab>
+    <mat-tab label="Address">
+      <address-form></address-form>
+    </mat-tab>
+  </mat-tab-group>
+</form>
+
+<pre>{{ formGroup.getRawValue() | json }}</pre>

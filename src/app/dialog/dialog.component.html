@@ -1,0 +1,12 @@
+<div class="overlay" (click)="onOverlayClicked($event)">
+  <div
+    @slideInOut
+    class="dialog"
+    [class.full]="fullScreen"
+    (click)="onDialogClicked($event)"
+  >
+    <button (click)="done()">Done</button>
+    <button (click)="expand()">Open fullscreen</button>
+    <ng-template appInsertion></ng-template>
+  </div>
+</div>
